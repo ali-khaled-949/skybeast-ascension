@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2732" height="2732" viewBox="0 0 2732 2732">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d2338"/>
+      <stop offset="100%" stop-color="#081522"/>
+    </linearGradient>
+  </defs>
+  <rect width="2732" height="2732" fill="url(#bg)"/>
+  <g transform="translate(1366 1300)">
+    <circle cx="0" cy="0" r="430" fill="#e6ecf5"/>
+    <circle cx="130" cy="-60" r="360" fill="#0d2338"/>
+    <path d="M-250 420 L0 -180 L250 420 L160 420 L0 40 L-160 420 Z" fill="#f3d56a"/>
+  </g>
+  <text x="1366" y="1930" fill="#d8e6f7" font-size="170" text-anchor="middle" font-family="Trebuchet MS, Verdana, sans-serif">
+    SkyBeast Ascension
+  </text>
+</svg>

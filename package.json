@@ -1,0 +1,26 @@
+{
+  "name": "skybeast-ascension",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env server/index.js",
+    "dev": "node --env-file=.env server/index.js",
+    "mobile:web": "mkdir -p mobile_www && cp -f index.html mobile_www/index.html && rm -rf mobile_www/assets && cp -R assets mobile_www/assets",
+    "mobile:assets": "npx @capacitor/assets generate --assetPath resources --ios --android",
+    "mobile:sync": "npm run mobile:web && npx cap sync",
+    "mobile:ios": "npm run mobile:sync && npx cap open ios",
+    "mobile:android": "npm run mobile:sync && npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/core": "^6.2.1",
+    "@capacitor/ios": "^6.2.1",
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^6.2.1"
+  }
+}

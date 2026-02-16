@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 96">
+  <!-- trailing cape -->
+  <path d="M18 74 C10 62 11 47 21 39 C30 32 44 34 52 44 C49 56 50 69 58 82 C45 85 28 84 18 74 Z"
+    fill="#2c313b" stroke="#0f1115" stroke-width="4"/>
+  <path d="M30 78 C22 68 23 55 30 49 C36 44 45 46 50 54 C49 63 51 71 57 79 C48 82 37 82 30 78 Z"
+    fill="#3a414d" stroke="#13161b" stroke-width="2.8"/>
+
+  <!-- torso / wrap -->
+  <path d="M54 69 C55 56 64 47 74 47 C84 47 91 56 90 69 L85 84 C80 88 74 90 69 90 C64 90 59 88 55 84 Z"
+    fill="#d5d7db" stroke="#111" stroke-width="4"/>
+  <path d="M58 68 C62 72 67 74 74 74 C79 74 84 72 88 68" fill="none" stroke="#969ca6" stroke-width="2.2"/>
+  <path d="M66 58 C69 56 74 56 78 58" stroke="#8d939d" stroke-width="2"/>
+
+  <!-- hood -->
+  <path d="M60 42 C62 28 70 19 80 18 C90 18 98 27 100 40 C96 49 90 55 81 57 C72 56 65 50 60 42 Z"
+    fill="#eceef1" stroke="#111" stroke-width="4"/>
+  <path d="M68 42 C70 34 75 29 81 29 C87 29 92 34 94 42 C91 47 87 51 81 52 C75 51 71 47 68 42 Z"
+    fill="#2f343d" stroke="#111" stroke-width="2.6"/>
+  <circle cx="77" cy="40" r="2.3" fill="#f4fbff"/>
+  <circle cx="86" cy="40" r="2.3" fill="#f4fbff"/>
+  <path d="M75 46 L88 46" stroke="#6f7783" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- forearm / crescent weapon -->
+  <path d="M86 62 L101 56" stroke="#3a2b1f" stroke-width="5.2" stroke-linecap="round"/>
+  <path d="M105 57 C98 55 95 48 99 42 C103 36 111 35 117 39 C111 39 107 42 105 46 C104 50 104 54 105 57 Z"
+    fill="#dfc468" stroke="#111" stroke-width="2.4"/>
+  <path d="M106 57 C111 55 114 52 115 47" fill="none" stroke="#fff2ba" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- lower cloth -->
+  <path d="M60 82 L52 91 L65 90" fill="#3a404b" stroke="#111" stroke-width="3"/>
+  <path d="M83 82 L92 91 L79 90" fill="#3a404b" stroke="#111" stroke-width="3"/>
+</svg>

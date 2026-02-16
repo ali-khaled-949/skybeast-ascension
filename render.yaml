@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: skybeast-ascension
+    runtime: node
+    plan: starter
+    region: ohio
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: DB_PATH
+        value: /var/data/data.json
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+    disk:
+      name: skybeast-data
+      mountPath: /var/data
+      sizeGB: 1

@@ -1,0 +1,59 @@
+{
+  "users": {
+    "solidinnovator@gmail.com": {
+      "name": "Ali T. Khaled",
+      "email": "solidinnovator@gmail.com",
+      "tier": 30,
+      "xp": 8581347.30400002,
+      "xpToNext": 50,
+      "score": 3685582,
+      "subscribed": true,
+      "foodStats": {
+        "tree": 755,
+        "floor": 1070
+      },
+      "quest": {
+        "progress": 1,
+        "target": 36,
+        "rewardXp": 1867941,
+        "rewardScore": 365202
+      },
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKU0u-7aXlAGo271alp2asisabQjJofduj4RIS7zZsjA1Xpqg_z=s96-c",
+      "authProvider": "google",
+      "settings": {
+        "version": 2,
+        "quality": "medium",
+        "reduceMotion": true,
+        "showMiniMap": true,
+        "advancedHud": false,
+        "autoSave": true,
+        "autoPerformance": true,
+        "highContrast": false,
+        "colorblindSafe": false,
+        "textScale": 1,
+        "audio": {
+          "masterVolume": 0.8,
+          "musicVolume": 0.55,
+          "sfxVolume": 0.75,
+          "muteMaster": false,
+          "muteMusic": false,
+          "muteSfx": false
+        },
+        "controls": {
+          "moveUp": "KeyW",
+          "moveDown": "KeyS",
+          "moveLeft": "KeyA",
+          "moveRight": "KeyD",
+          "sprint": "ShiftLeft",
+          "jump": "Space",
+          "abilityQ": "KeyQ",
+          "abilityE": "KeyE",
+          "abilityF": "KeyF",
+          "attack": "KeyJ",
+          "respawn": "KeyR",
+          "minimap": "KeyM"
+        }
+      }
+    }
+  }
+}
