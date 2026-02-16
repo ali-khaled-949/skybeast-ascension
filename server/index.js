@@ -16,6 +16,7 @@ const SESSION_SECRET = process.env.SESSION_SECRET || "dev_only_change_me";
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || "";
 const WS_BROADCAST_MS = Math.max(50, Number(process.env.WS_BROADCAST_MS || 90));
 const WS_PING_MS = Math.max(10000, Number(process.env.WS_PING_MS || 20000));
+const INSTANCE_ID = process.env.INSTANCE_ID || crypto.randomBytes(4).toString("hex");
 const SETTINGS_SCHEMA_VERSION = 2;
 const DEFAULT_CONTROL_BINDINGS = Object.freeze({
   moveUp: "KeyW",
@@ -341,6 +342,7 @@ app.get("/api/health", (_req, res) => {
   res.json({
     ok: true,
     service: "skybeast",
+    instanceId: INSTANCE_ID,
     uptimeSec: Math.floor(process.uptime()),
     playersOnline: players.size
   });
