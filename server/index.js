@@ -524,7 +524,7 @@ wss.on("connection", (ws, req) => {
     ws.isAlive = true;
   });
 
-  players.set(id, { id, name, email, x: 180, y: 200, tier: 1 });
+  players.set(id, { id, name, email, x: 180, y: 200, tier: 1, score: 0 });
   ws.playerId = id;
   ws.send(JSON.stringify({ type: "welcome", id }));
   broadcast({ type: "presence", count: players.size });
@@ -542,6 +542,7 @@ wss.on("connection", (ws, req) => {
       p.x = Number(msg.x) || p.x;
       p.y = Number(msg.y) || p.y;
       p.tier = Number(msg.tier) || p.tier;
+      p.score = Math.max(0, Math.floor(Number(msg.score) || p.score || 0));
       p.name = msg.name || p.name;
     }
   });

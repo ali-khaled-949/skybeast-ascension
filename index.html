@@ -4293,6 +4293,7 @@
         x: p.x,
         y: p.y,
         tier: p.tier,
+        score: Math.max(0, Math.floor(state.score || 0)),
         name: ui.playerName.value.trim() || "Guest"
       }));
     }
@@ -5765,23 +5766,43 @@
 
     function hudLeaderboardRows(limit = 10) {
       const rows = [];
+      const selfName = (ui.playerName.value || "Player").trim() || "Player";
       if (state.net.leaderboard.length) {
         for (const item of state.net.leaderboard) {
           if (!item) continue;
+          const rawName = (item.name || "Player").trim() || "Player";
+          const fixedName = rawName.toLowerCase() === "you" ? selfName : rawName;
           rows.push({
-            name: (item.name || "Player").trim() || "Player",
-            score: Math.max(0, Math.floor(item.score || 0))
+            name: fixedName,
+            score: Math.max(0, Math.floor(item.score || 0)),
+            live: false
           });
         }
       }
-      if (!rows.length) {
+      rows.push({
+        name: selfName,
+        score: Math.max(0, Math.floor(state.score || 0)),
+        live: true
+      });
+      for (const [id, remote] of Object.entries(state.net.remotePlayers || {})) {
+        if (!remote || id === state.net.id) continue;
         rows.push({
-          name: (ui.playerName.value || "You").trim() || "You",
-          score: Math.max(0, Math.floor(state.score || 0))
+          name: (remote.name || "Guest").trim() || "Guest",
+          score: Math.max(0, Math.floor(remote.score || 0)),
+          live: true
         });
       }
-      rows.sort((a, b) => b.score - a.score);
-      return rows.slice(0, limit);
+      const dedup = new Map();
+      for (const row of rows) {
+        const key = row.name.toLowerCase();
+        const prev = dedup.get(key);
+        if (!prev || row.score > prev.score || (row.live && !prev.live)) {
+          dedup.set(key, row);
+        }
+      }
+      return Array.from(dedup.values())
+        .sort((a, b) => b.score - a.score)
+        .slice(0, limit);
     }
 
     function drawHudSpriteChip(tier, x, y, size, ring = "#56e38d") {
